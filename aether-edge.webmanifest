@@ -1,7 +1,7 @@
 {
   "name": "Aether Edge: The Void Ascent",
   "short_name": "Aether Edge",
-  "start_url": "./AETHER%20EDGE%20mobile-ready.html",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#0a0a12",
   "theme_color": "#0a0a12",
