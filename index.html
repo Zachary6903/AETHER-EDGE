@@ -1076,6 +1076,256 @@
         body.mobile-ui #tooltip {
             width: min(280px, calc(100vw - 24px));
         }
+
+
+        @media (orientation: landscape) and (max-height: 500px) {
+            body.mobile-ui #combat-screen {
+                position: relative;
+                display: grid;
+                grid-template-rows: auto minmax(0, 1fr) auto;
+                gap: 6px;
+                overflow: hidden;
+            }
+            body.mobile-ui #combat-screen .top-bar {
+                position: relative;
+                top: auto;
+                padding: 6px 8px;
+                min-height: 0;
+                gap: 6px;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+            body.mobile-ui #combat-screen .top-bar > div {
+                width: auto;
+                min-width: 0;
+                flex-wrap: nowrap;
+                gap: 6px;
+            }
+            body.mobile-ui #combat-screen .top-bar > div:first-child,
+            body.mobile-ui #combat-screen .top-bar > div:last-child {
+                flex: 0 1 auto;
+            }
+            body.mobile-ui #combat-screen .top-bar > div:nth-child(2) {
+                flex: 1 1 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            body.mobile-ui #combat-screen .top-bar .btn {
+                margin: 0;
+                min-height: 34px;
+                padding: 8px 12px;
+                font-size: 0.72rem;
+            }
+            body.mobile-ui #combat-screen .top-bar .mini-btn {
+                min-height: 30px;
+                padding: 6px 10px !important;
+                font-size: 0.68rem !important;
+            }
+            body.mobile-ui #combat-screen #p-hp-ui,
+            body.mobile-ui #combat-screen #e-name-ui,
+            body.mobile-ui #combat-screen #e-hp-ui,
+            body.mobile-ui #combat-screen #p-ward-ui {
+                font-size: 0.88rem !important;
+                line-height: 1.1;
+            }
+            body.mobile-ui #combat-screen .relic-bar {
+                gap: 6px;
+                padding: 4px 8px;
+                min-height: 34px;
+            }
+            body.mobile-ui #combat-screen .relic-image {
+                width: 20px;
+                height: 20px;
+            }
+            body.mobile-ui #combat-screen .battle-arena {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 10px;
+                padding: 0;
+                overflow: hidden;
+                min-height: 0;
+            }
+            body.mobile-ui #combat-screen #player-unit {
+                flex: 0 0 130px;
+                width: 130px;
+                min-width: 130px;
+                margin: 0;
+            }
+            body.mobile-ui #combat-screen #player-unit .sprite-image {
+                width: 88px;
+                height: 88px;
+                margin-bottom: 4px;
+            }
+            body.mobile-ui #combat-screen #player-unit .hp-bar-container {
+                height: 16px;
+            }
+            body.mobile-ui #combat-screen #player-unit .hp-text {
+                font-size: 0.66rem;
+                line-height: 12px;
+            }
+            body.mobile-ui #combat-screen .enemy-team {
+                flex: 1 1 auto;
+                width: auto;
+                min-width: 0;
+                min-height: 0;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 8px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding-bottom: 2px;
+            }
+            body.mobile-ui #combat-screen .enemy-team .entity {
+                flex: 0 0 120px;
+                width: 120px;
+                min-width: 120px;
+                max-width: 120px;
+                padding: 8px 6px;
+                min-height: 0;
+            }
+            body.mobile-ui #combat-screen .enemy-nameplate,
+            body.mobile-ui #combat-screen .enemy-intent,
+            body.mobile-ui #combat-screen .enemy-team .cinzel {
+                font-size: 0.72rem;
+                line-height: 1.1;
+            }
+            body.mobile-ui #combat-screen .enemy-intent {
+                min-height: 26px;
+                height: auto;
+                margin-bottom: 4px;
+            }
+            body.mobile-ui #combat-screen .enemy-team .sprite-image {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 4px;
+            }
+            body.mobile-ui #combat-screen .enemy-team .hp-bar-container {
+                height: 14px;
+            }
+            body.mobile-ui #combat-screen .enemy-team .hp-text {
+                font-size: 0.62rem;
+                line-height: 10px;
+            }
+            body.mobile-ui #combat-screen .energy-orb {
+                position: absolute;
+                left: 8px;
+                bottom: 86px;
+                width: 48px;
+                height: 48px;
+                margin: 0;
+                z-index: 20;
+            }
+            body.mobile-ui #combat-screen .energy-orb b {
+                font-size: 0.95rem;
+            }
+            body.mobile-ui #combat-screen .energy-orb small {
+                font-size: 0.55rem;
+            }
+            body.mobile-ui #combat-screen .hand-container {
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 6px;
+                min-height: 0;
+                height: auto;
+                padding: 0 106px 2px 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x proximity;
+            }
+            body.mobile-ui #combat-screen .card {
+                flex: 0 0 116px;
+                width: 116px;
+                height: 176px;
+                margin: 0;
+            }
+            body.mobile-ui #combat-screen .card-name {
+                min-height: 26px;
+                padding: 4px 6px;
+                font-size: 0.7rem;
+            }
+            body.mobile-ui #combat-screen .card-art {
+                flex-basis: 78px;
+                margin: 4px;
+            }
+            body.mobile-ui #combat-screen .card-body {
+                min-height: 36px;
+                padding: 4px 6px 6px;
+                font-size: 0.62rem;
+                line-height: 1.1;
+            }
+            body.mobile-ui #combat-screen .card-cost {
+                width: 24px;
+                height: 24px;
+                top: -7px;
+                left: -7px;
+                font-size: 0.75rem;
+            }
+            body.mobile-ui #combat-screen .sticky-bottom-bar {
+                position: absolute;
+                right: 8px;
+                bottom: calc(8px + env(safe-area-inset-bottom));
+                z-index: 30;
+                padding: 0;
+                background: transparent;
+                border-top: none;
+            }
+            body.mobile-ui #combat-screen .sticky-bottom-bar .btn {
+                margin: 0;
+                min-height: 44px;
+                padding: 10px 16px;
+            }
+        }
+
+        @media (orientation: landscape) and (max-height: 430px) {
+            body.mobile-ui #combat-screen #player-unit {
+                flex-basis: 116px;
+                width: 116px;
+                min-width: 116px;
+            }
+            body.mobile-ui #combat-screen #player-unit .sprite-image {
+                width: 76px;
+                height: 76px;
+            }
+            body.mobile-ui #combat-screen .enemy-team .entity {
+                flex-basis: 108px;
+                width: 108px;
+                min-width: 108px;
+                max-width: 108px;
+                padding: 6px 5px;
+            }
+            body.mobile-ui #combat-screen .enemy-team .sprite-image {
+                width: 54px;
+                height: 54px;
+            }
+            body.mobile-ui #combat-screen .enemy-intent,
+            body.mobile-ui #combat-screen .enemy-nameplate,
+            body.mobile-ui #combat-screen .enemy-team .cinzel {
+                font-size: 0.66rem;
+            }
+            body.mobile-ui #combat-screen .card {
+                flex-basis: 104px;
+                width: 104px;
+                height: 162px;
+            }
+            body.mobile-ui #combat-screen .card-art {
+                flex-basis: 70px;
+            }
+            body.mobile-ui #combat-screen .energy-orb {
+                width: 42px;
+                height: 42px;
+                bottom: 80px;
+            }
+            body.mobile-ui #combat-screen .sticky-bottom-bar .btn {
+                min-height: 40px;
+                padding: 8px 14px;
+                font-size: 0.82rem;
+            }
+        }
         @media (max-width: 430px) {
             body.mobile-ui .enemy-team .entity {
                 width: 100%;
@@ -5935,6 +6185,330 @@ const CARDS = [
     if (state && state.combat) renderCombat();
 })();
 </script>
+
+
+<style id="ae-combat-hotfix-v6">
+body.mobile-ui.mobile-landscape #combat-screen {
+    grid-template-columns: minmax(0,1fr) 88px !important;
+    grid-template-rows: 52px 150px 40px 118px !important;
+    gap: 4px 8px !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+    overflow: hidden !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar {
+    grid-column: 1 / 3 !important;
+    grid-row: 1 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) minmax(0,1.25fr) auto !important;
+    align-items: center !important;
+    gap: 4px 8px !important;
+    min-height: 52px !important;
+    max-height: 52px !important;
+    padding: 4px 6px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    background: rgba(0,0,0,0.9) !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar > div {
+    min-width: 0 !important;
+    width: auto !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar > div:first-child,
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar > div:nth-child(3) {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar > div:nth-child(3) {
+    justify-content: flex-end !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar > div:nth-child(2) {
+    text-align: center !important;
+    overflow: hidden !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar .cinzel,
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar span,
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar div {
+    font-size: 0.72rem !important;
+    line-height: 1.05 !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen > .top-bar .btn {
+    margin: 0 !important;
+    padding: 5px 8px !important;
+    font-size: 0.6rem !important;
+    min-height: 28px !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen .relic-bar {
+    min-height: 28px !important;
+    padding: 2px 6px !important;
+    gap: 4px !important;
+    margin-left: 0 !important;
+}
+body.mobile-ui.mobile-landscape .battle-arena {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    display: grid !important;
+    grid-template-columns: 94px minmax(0,1fr) !important;
+    gap: 6px !important;
+    align-items: start !important;
+    padding: 0 !important;
+    min-height: 150px !important;
+    max-height: 150px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+body.mobile-ui.mobile-landscape #player-unit {
+    width: 94px !important;
+    max-width: 94px !important;
+    min-width: 94px !important;
+    padding: 2px 4px 4px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+}
+body.mobile-ui.mobile-landscape #player-unit .sprite-image,
+body.mobile-ui.mobile-landscape #p-sprite.ae-pixel-art {
+    width: 54px !important;
+    height: 82px !important;
+    max-width: 54px !important;
+    max-height: 82px !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+    margin: 0 auto 2px !important;
+}
+body.mobile-ui.mobile-landscape #player-unit .hp-bar-container {
+    height: 12px !important;
+    width: 100% !important;
+}
+body.mobile-ui.mobile-landscape #player-unit .hp-text {
+    font-size: 0.58rem !important;
+    line-height: 10px !important;
+}
+body.mobile-ui.mobile-landscape .enemy-team {
+    width: 100% !important;
+    min-height: 0 !important;
+    max-height: 150px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding-right: 0 !important;
+}
+body.mobile-ui.mobile-landscape .enemy-team .entity {
+    width: 96px !important;
+    min-width: 96px !important;
+    max-width: 96px !important;
+    flex: 0 0 96px !important;
+    padding: 4px 4px 6px !important;
+    display: grid !important;
+    grid-template-rows: auto auto 40px auto auto !important;
+    align-content: start !important;
+    overflow: hidden !important;
+}
+body.mobile-ui.mobile-landscape .enemy-nameplate {
+    font-size: 0.54rem !important;
+    line-height: 1.05 !important;
+    min-height: 1.15rem !important;
+    margin-bottom: 1px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+body.mobile-ui.mobile-landscape .enemy-intent {
+    font-size: 0.52rem !important;
+    line-height: 1.05 !important;
+    min-height: 1.85rem !important;
+    margin-bottom: 2px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+body.mobile-ui.mobile-landscape .enemy-team .sprite-image,
+body.mobile-ui.mobile-landscape .enemy-team .sprite-image.ae-pixel-art {
+    width: 34px !important;
+    height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+body.mobile-ui.mobile-landscape .enemy-team .hp-bar-container {
+    height: 10px !important;
+}
+body.mobile-ui.mobile-landscape .enemy-team .hp-text {
+    font-size: 0.52rem !important;
+    line-height: 8px !important;
+}
+body.mobile-ui.mobile-landscape .energy-orb {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    width: 38px !important;
+    height: 38px !important;
+    margin: 0 0 0 4px !important;
+    font-size: 0.52rem !important;
+    justify-self: start !important;
+    align-self: start !important;
+}
+body.mobile-ui.mobile-landscape .hand-container {
+    grid-column: 1 !important;
+    grid-row: 4 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    gap: 4px !important;
+    height: 118px !important;
+    min-height: 118px !important;
+    max-height: 118px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 0 2px 2px !important;
+}
+body.mobile-ui.mobile-landscape .card {
+    flex: 0 0 92px !important;
+    width: 92px !important;
+    height: 118px !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+}
+body.mobile-ui.mobile-landscape .card-name {
+    min-height: 18px !important;
+    padding: 3px 4px 2px !important;
+    font-size: 0.5rem !important;
+}
+body.mobile-ui.mobile-landscape .card-cost {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 0.62rem !important;
+}
+body.mobile-ui.mobile-landscape .card-art {
+    flex: 0 0 40px !important;
+    margin: 2px !important;
+    padding: 2px !important;
+}
+body.mobile-ui.mobile-landscape .card-body {
+    min-height: 20px !important;
+    padding: 2px 4px 5px !important;
+    font-size: 0.44rem !important;
+    line-height: 1.08 !important;
+}
+body.mobile-ui.mobile-landscape .sticky-bottom-bar {
+    grid-column: 2 !important;
+    grid-row: 2 / 5 !important;
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;
+    justify-self: center !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-top: 0 !important;
+}
+body.mobile-ui.mobile-landscape #combat-screen .sticky-bottom-bar .btn {
+    min-width: 80px !important;
+    min-height: 34px !important;
+    padding: 8px 10px !important;
+    font-size: 0.64rem !important;
+    margin: 0 !important;
+}
+@media (max-width: 760px) and (orientation: landscape) {
+    body.mobile-ui.mobile-landscape #combat-screen {
+        grid-template-columns: minmax(0,1fr) 80px !important;
+        grid-template-rows: 46px 138px 36px 110px !important;
+    }
+    body.mobile-ui.mobile-landscape #combat-screen > .top-bar {
+        min-height: 46px !important;
+        max-height: 46px !important;
+        padding: 3px 5px !important;
+    }
+    body.mobile-ui.mobile-landscape #combat-screen > .top-bar .cinzel,
+    body.mobile-ui.mobile-landscape #combat-screen > .top-bar span,
+    body.mobile-ui.mobile-landscape #combat-screen > .top-bar div {
+        font-size: 0.62rem !important;
+        line-height: 1.02 !important;
+    }
+    body.mobile-ui.mobile-landscape #combat-screen > .top-bar .btn {
+        padding: 4px 6px !important;
+        font-size: 0.56rem !important;
+        min-height: 26px !important;
+    }
+    body.mobile-ui.mobile-landscape .battle-arena {
+        grid-template-columns: 82px minmax(0,1fr) !important;
+        min-height: 138px !important;
+        max-height: 138px !important;
+    }
+    body.mobile-ui.mobile-landscape #player-unit,
+    body.mobile-ui.mobile-landscape #player-unit .sprite-image,
+    body.mobile-ui.mobile-landscape #p-sprite.ae-pixel-art {
+        max-width: 82px !important;
+    }
+    body.mobile-ui.mobile-landscape #player-unit .sprite-image,
+    body.mobile-ui.mobile-landscape #p-sprite.ae-pixel-art {
+        width: 46px !important;
+        height: 72px !important;
+        max-width: 46px !important;
+        max-height: 72px !important;
+    }
+    body.mobile-ui.mobile-landscape .enemy-team {
+        max-height: 138px !important;
+    }
+    body.mobile-ui.mobile-landscape .enemy-team .entity {
+        width: 82px !important;
+        min-width: 82px !important;
+        max-width: 82px !important;
+        flex-basis: 82px !important;
+        grid-template-rows: auto auto 34px auto auto !important;
+    }
+    body.mobile-ui.mobile-landscape .enemy-team .sprite-image,
+    body.mobile-ui.mobile-landscape .enemy-team .sprite-image.ae-pixel-art {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+    }
+    body.mobile-ui.mobile-landscape .enemy-intent {
+        font-size: 0.46rem !important;
+        min-height: 1.65rem !important;
+    }
+    body.mobile-ui.mobile-landscape .enemy-nameplate {
+        font-size: 0.48rem !important;
+    }
+    body.mobile-ui.mobile-landscape .hand-container {
+        height: 110px !important;
+        min-height: 110px !important;
+        max-height: 110px !important;
+    }
+    body.mobile-ui.mobile-landscape .card {
+        flex-basis: 86px !important;
+        width: 86px !important;
+        height: 110px !important;
+    }
+    body.mobile-ui.mobile-landscape .card-art {
+        flex-basis: 36px !important;
+    }
+    body.mobile-ui.mobile-landscape .card-body {
+        font-size: 0.4rem !important;
+    }
+    body.mobile-ui.mobile-landscape #combat-screen .sticky-bottom-bar .btn {
+        min-width: 72px !important;
+        min-height: 32px !important;
+        font-size: 0.6rem !important;
+    }
+}
+</style>
 
 </body>
 </html>
